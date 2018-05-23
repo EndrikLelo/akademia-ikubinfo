@@ -9,6 +9,8 @@
 	<h:form>
 		<h:inputText value="#{testBean.text}"> INPUT </h:inputText>
 		<h:commandButton value="Submit" action="#{testBean.testSubmit}"/>
+		<br/>
+		Vlera e derguar: <h:outputText value="${testBean.text}"/>
 	</h:form>
 </h:body>
 </html>

@@ -1,5 +1,6 @@
 package al.ikubinfo.akademia.managedbeans;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
@@ -12,6 +13,11 @@ public class TestBean {
 	private SessionBean user;
 	
 	private String text;
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("INIT - TestBean");
+	}
 	
 	public String testSubmit() {
 		System.out.println("TEST - SUBMIT: " + text);
